@@ -9,7 +9,7 @@ export function userValidation(userIsSignedIn, email = '') {
         const header = document.querySelector('header-component')
         if(header) header.removeAttribute('logged')
         if (!isHome && !isLogin && !isSingUp){
-            window.location.replace('/log-in/')
+            window.location.replace('/')
         }
     } else {
         const isLogin =  path.includes('log-in')
