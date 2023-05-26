@@ -45,7 +45,7 @@ onAuthStateChanged(auth, (user) => {
     }
 });
 
-/* RECIVIR PRODUCTOS DEL DATABASE
+/* RECIVIR PRODUCTOS DEL DATABASE */
 
 export async function getProdcuts() {
     const allProducts = [];
@@ -78,7 +78,6 @@ export async function addProductWithId(product, id, file) {
         console.error("Error adding document: ", e);
     }
 }
-*/
 
 export async function createUser(userInfo) {
 

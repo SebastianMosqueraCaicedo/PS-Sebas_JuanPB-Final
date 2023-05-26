@@ -1,3 +1,8 @@
+import {getProdcuts, addProductWithId} from '../firebase.js'
+
+// product db
+let allProducts;
+
 // filtros
 let items, itemsFilter, itemSelect, filterInput, filters;
 
@@ -6,9 +11,18 @@ filterInput = document.getElementById("store-filter");
 filterInput.addEventListener('click', catFilter, {once:false});
 let fValue = filterInput.value;
 
+// boton filtro
+let filterButton = document.getElementById("button-update");
+filterButton.addEventListener('click', catFilter, {once:false});
+
 // divisores para mostrar detalle o tienda
 let specifications = document.getElementById("specific-product");
 let closeWindow = document.getElementById("product-section")
+
+async function updateProducts(){
+	allProducts = await getProdcuts();
+	console.log(allProducts)
+}
 
 function setDetailsInfo(obj__) {
     specifications.style.display = "flex"
@@ -54,6 +68,7 @@ function goback() {
 function catFilter() {
 	fValue = filterInput.value;
 	updateItems();
+	updateProducts();
 }
 
 function filterItems(){
