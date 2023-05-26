@@ -1,4 +1,25 @@
 console.log("conectado")
+///////// FIREBASE /////////
+
+// Import the functions you need from the SDKs you need
+import { initializeApp } from "firebase/app";
+import { getAnalytics } from "firebase/analytics";
+
+// Your web app's Firebase configuration
+// For Firebase JS SDK v7.20.0 and later, measurementId is optional
+const firebaseConfig = {
+  apiKey: "AIzaSyDZ1EURIBlm6ZrhzXd7peNNf2fb-CQfOBA",
+  authDomain: "ps-database.firebaseapp.com",
+  projectId: "ps-database",
+  storageBucket: "ps-database.appspot.com",
+  messagingSenderId: "1062406476119",
+  appId: "1:1062406476119:web:0895126bd3155ec6b3ae12",
+  measurementId: "G-VD40KQCKW2"
+};
+
+// Initialize Firebase
+const app = initializeApp(firebaseConfig);
+const analytics = getAnalytics(app);
 
 ///////// HAMBURGUER /////////
 

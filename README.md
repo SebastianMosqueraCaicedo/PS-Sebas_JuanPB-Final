@@ -3,7 +3,7 @@ Basic website using HTML, JS and CSS. Built on Vite and Firebase
 
 ### Dependencies
 #### Modules / Frameworks
-Move to directory "PS-Sebas-Bueno" and run **npm install** to build dependencies, then run **npm run dev** to host a local instance of the project
+Move to directory "PS-Sebas-Bueno". First, run **npm install firebase**, then run **npm install** (just to be sure) to build dependencies, then run **npm run dev** to host a local instance of the project
 
 - [Vite.js](https://vitejs.dev/)
 - [Firebase](https://firebase.google.com/)
