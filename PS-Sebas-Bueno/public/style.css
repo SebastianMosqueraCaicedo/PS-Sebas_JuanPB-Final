@@ -1,0 +1,537 @@
+/* DOCUMENTO */
+*{
+    font-family: 'Golos Text', sans-serif;
+}
+
+body {
+	margin: 0;
+	background-color: #16191D;
+}
+
+footer {
+	background-color: white;
+}
+
+header {
+	background-color: #16191D;
+}
+
+img {
+	border-radius: 30px;
+}
+ h1, h2, h3 {
+    color: white;
+ }
+
+
+/* SWIPER */
+
+.swiper-wrapper img {
+    margin-left: 120px;
+    max-width: 80%;
+}
+
+/* CARROUSEL */
+
+/* --- --- CAROUSEL --- --- */
+
+.carousel{
+   margin: 90px 200px;
+
+}
+
+.carousel img {
+    width: 300px;
+    object-fit: contain;
+}
+
+.carousel p {
+    color: white;   
+}
+
+.carousel__contenedor {
+	position: relative;
+}
+
+.carousel__anterior,
+.carousel__siguiente {
+	position: absolute;
+	display: block;
+	width: 30px;
+	height: 30px;
+	border: none;
+	top: calc(50% - 35px);
+	cursor: pointer;
+	line-height: 30px;
+	text-align: center;
+	background: none;
+	color: #fff;
+	opacity: 20%;
+}
+
+.carousel__anterior:hover,
+.carousel__siguiente:hover {
+	opacity: 100%;
+}
+
+.carousel__anterior {
+	left: -30px;
+}
+
+.carousel__siguiente {
+	right: -30px;
+}
+
+.carousel__lista {
+	overflow: hidden;
+}
+
+.carousel__elemento {
+	text-align: center;
+}
+
+.carousel__indicadores .glider-dot {
+	display: block;
+	width: 30px;
+	height: 4px;
+	background: #fff;
+	opacity: .2;
+	border-radius: 0;
+}
+
+.carousel__indicadores .glider-dot:hover {
+	opacity: .5;
+}
+
+.carousel__indicadores .glider-dot.active {
+	opacity: 1;
+}
+
+/*  HEADER - MOSQUERA*/
+
+#header-mobile {
+	display: none;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+}
+.header-block {
+	width: 900px;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+
+header input {
+    border-radius: 15px;
+    height: 20px;
+}
+
+header img {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+    margin-right: 10px;
+}
+header div {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+header div button {
+    margin: 0px 10px;
+    width: 70px;
+    height: 30px;
+    border-radius: 15px;
+    font-weight: bold;
+    color:#16191D;
+}
+ 
+.header-navegacion img {
+    width: 30px;
+	margin: 0 20px;
+	object-fit: contain;
+	border-radius: 0;
+}
+
+/*  IMAGEN PRINCIPAL - MOSQUERA*/
+.imagen-principal {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.imagen-principal-texto{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+}
+.imagen-principal img{
+    margin-top: 30px ;
+    width: 900px;
+    object-fit: contain;
+}
+
+.imagen-principal h2{
+	margin-bottom: 0;
+    font-size: 50px;
+}
+
+.imagen-principal p {
+    color: white;
+    font-weight: 200;
+}
+
+/*  CTA - MOSQUERA*/
+
+.CTA-comp-principal {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 900px;
+    align-items: center;
+}
+
+.CTA {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 25px;
+}
+
+.CTA-cont-img img{
+    height: 225px;
+    width: 350px;
+    margin-left: 50px;
+    object-fit: contain;
+    border-radius: 30px;
+}
+
+.CTA-cont-texto {
+    padding: 20px 10px;
+    border-radius: 50px;
+    background-color: #252a30;
+    display: flex;
+    flex-direction: row;
+    padding: 10px 30px;
+    border-radius: 30px;
+    color: rgb(194, 194, 194);
+}
+
+
+.CTA-input {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: flex-start;
+    justify-content: center;
+}
+
+.CTA input {
+    margin: 10px 0;
+    height: 30px;
+    border-radius: 10px;
+}
+
+.CTA-boton{
+	margin-top: 10px;
+    width: 90px;
+    border-radius: 5px;
+    height: 40px;
+    font-weight: bold;
+}
+
+.CTA-cont-texto p {
+    max-width: 250px;
+}
+
+.CTA-texto {
+    margin-right: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.CTA-texto h3 {
+    font-size: 40px;
+    text-align: left;
+}
+
+.CTA p {
+    margin-bottom: 40px;
+}
+
+/* SWIPER - JUAN PABLO*/
+ .use-swiper{
+    margin: 60px 0;
+    display: flex;
+    justify-content: center;
+ }
+
+ .use-swiper-block{
+	 display: flex;
+	 flex-direction: row;
+	 width: 900px;
+	 justify-content: space-between;
+ }
+
+ .use-swiper img{
+    width: 150px;
+    object-fit: contain;
+ }
+
+ /* CONTROLLER - JUAN PABLO*/
+
+ .controller div img {
+    width: 500px;
+    object-fit: contain;
+ }
+
+ .controller {
+    display: flex;
+    justify-content: center;
+ }
+
+ .controller-block{
+	 display: flex;
+	 justify-content: space-between;
+	 flex-direction: row;
+	 width: 900px;
+ }
+
+ .controller-text-container{
+    max-width: 300px;
+ }
+
+ .controller p{
+    color: #fff;
+ }
+
+  /* MORE INFO- MOSQUERA*/
+
+  .use-more-info{
+    margin: 60px 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+ }
+ .use-more-info-block{
+	 display: flex;
+	 justify-content: space-between;
+	 flex-direction: row;
+	 width: 900px;
+ }
+.use-more-info-block div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+ .use-more-info img{
+    width: 200px;
+    height: 300px;
+    margin: 10px 0;
+    object-fit: contain;
+    background-color: lightslategray;
+ }
+ .use-more-info h3{
+	 margin-bottom: 0;
+ }
+ .use-more-info p, h3{
+	 max-width: 200px;
+	 text-align: center;
+ }
+
+ .use-more-info p{
+    color: #fff;
+ }
+
+ .use-more-info button{
+    margin-top: 10px;
+    width: 90px;
+    border-radius: 5px;
+    height: 40px;
+    font-weight: bold;
+ }
+
+ /* STORE - JUAN PABLO*/
+
+ .store div img {
+    width: 500px;
+    object-fit: contain;
+    margin-left: 10%;
+}
+
+ .store {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+}
+
+ .store-text-container{
+    max-width: 300px;
+}
+
+/* FOOTER - JUAN PABLO*/
+
+footer {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 25px 0;
+    border-radius: 30px 30px 0 0;
+}
+
+footer img {
+    height: 60px;
+    width: 180px;
+    border-radius: 0;
+}
+
+footer p {
+	max-width: 750px;
+	text-align: center;
+	color: #16191D;
+}
+
+
+/* -------------- ESTILOS MOBILE */
+
+@media (max-width: 900px) {
+
+    /* HEADER */
+
+    #ham-hidden {
+	display: none;
+    }
+
+    #header-mobile{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .header-block {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+    }
+
+    header div {
+        justify-content: center;
+    }
+
+    #header-desktop{
+        display: none;
+    }
+
+    .ham-buttons {
+	display: none;
+	flex-direction: row;
+    }
+
+
+
+    .feature {
+        width: 100%;
+        margin: 16px 0;
+    }
+
+    #building-better {
+        padding: 20px;
+    }
+
+    /* Font Sizes */
+
+    h1, h3, .CTA-texto h3 , .imagen-principal h2 {
+	font-size: 20pt;
+    }
+
+    p, .CTA p {
+	font-size: 16pt;
+	max-width: 350px;
+    }
+
+    footer p {
+	font-size: 6pt;
+    }	
+
+    .imagen-principal p {
+	text-align: center
+    }
+
+    /* Image Sizes */
+
+    .swiper {
+	width: 90%;
+    }
+
+    .swiper img {
+        width: 60%;
+    }
+
+    footer img {
+	height: 100px;
+	width: 250px;
+    }
+
+    .store div img {
+	width: 350px;
+	margin-left: 0px;
+    }	
+
+    .use-more-info button {
+	width: 110px;
+	margin-bottom: 10px;
+    }
+
+    .use-more-info-block {
+	width: 100%;
+    }
+
+    .controller div img {
+	width: 100%;
+    }
+
+    .CTA-cont-img img {
+	margin-left: 0px;
+    }
+
+    .CTA-comp-principal {
+	width: 100%;
+    }
+
+    .carousel {
+	margin: 0px 25px;
+    }
+
+    .glider-slide img {
+	max-width: 90%;
+    }
+
+    /* Flex */
+
+    .imagen-principal, .imagen-principal-texto,
+    .CTA-comp-principal, .CTA, .CTA-cont-texto, .CTA-input, .CTA-texto,
+    .use-swiper-block, .controller-block, .use-more-info, .use-more-info-block,
+    .use-more-info-block div, .store, footer {
+	    flex-direction: column;
+	    align-items: center;
+    }
+}
+
+@media (max-width: 500px) {
+.swiper-wrapper img{
+    margin-left: 60px;
+} }

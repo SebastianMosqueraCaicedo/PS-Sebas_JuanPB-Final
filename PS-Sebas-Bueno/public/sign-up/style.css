@@ -1,0 +1,68 @@
+/* Estilos para la pantalla de "sign-up" */
+* {
+    font-family: 'Golos Text', sans-serif;
+    box-sizing: border-box;
+  }
+  
+  body {
+    margin: 0;
+    background-color: #16191D;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  h1 {
+    color: white;
+    margin-top: 40px;
+    text-align: center;
+  }
+  
+  form {
+    width: 400px;
+    padding: 20px;
+    background-color: #252a30;
+    border-radius: 10px;
+  }
+  
+  label {
+    display: block;
+    margin-top: 10px;
+    text-align: center;
+  }
+  
+  input[type="email"],
+  input[type="text"],
+  input[type="date"],
+  input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border-radius: 5px;
+    border: none;
+  }
+  
+  button {
+    display: block;
+    margin: 20px auto;
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: none;
+    background-color: #2639ca;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #2639ca;
+  }
+  
+  
+  
+  
+  
+  

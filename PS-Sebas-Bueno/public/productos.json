@@ -1,0 +1,182 @@
+[
+  {
+    "name": "PlayStation 4",
+    "desc": "The PlayStation 4 (PS4) is a state-of-the-art video game console that offers exceptional performance thanks to its custom processor and powerful graphics card. With its strong combination of hardware and software, the PS4 is one of the most popular consoles on the market and continues to be an attractive option for gaming enthusiasts looking for a high-quality gaming experience.",
+    "price": 399.99,
+    "date": "15/11/2013",
+    "cat": "Consoles",
+    "col": ["Black", "Gold"],
+    "img": ["assets/ps4.webp"]
+  },
+  {
+    "name": "PlayStation 5",
+    "desc": "Welcome to the gaming experience of the future! With its powerful AMD Zen 2 processor and AMD Radeon RDNA 2 graphics card, the PS5 offers a faster and smoother gaming experience. And not only that, but the console's futuristic design immerses you even more in the game. The PS5 is the culmination of years of innovation and evolution in the industry. Join me on the adventure and see what the PlayStation 5 can do!",
+    "price": 499.99,
+    "date": "12/11/2020",
+    "cat": "Consoles",
+    "col": ["White", "Black"],
+    "img": ["assets/ps5.webp"]
+  },
+  {
+    "name": "DualSense Wireless Controller",
+    "desc": "The DualSense wireless controller for PS5 offers immersive haptic feedback2, dynamic adaptive triggers, and an integrated microphone, all in an iconic design.",
+    "price": 63.99,
+    "date": "12/11/2020",
+    "cat": "Accessories",
+    "col": ["Black", "Red"],
+    "img": ["assets/control.png"]
+  },
+  {
+    "name": "PULSE 3D Wireless Headphones",
+    "desc": "Enjoy a seamless wireless experience with a headset tuned for 3D audio on PS4 and PS51 consoles. PULSE 3D wireless headphones have a sleek design with dual noise-cancelling microphones, charging via USB Type-C®, and a variety of easily accessible controls.",
+    "price": 54.99,
+    "date": "20/8/2021",
+    "cat": "Accessories",
+    "col": ["White", "Silver"],
+    "img": ["assets/pulse-headset.webp"]
+  },
+  {
+    "name": "Media Control",
+    "desc": "Quickly navigate through media content thanks to the built-in pause/play, fast-forward, and fast-backward buttons.",
+    "price": 25.99,
+    "date": "12/11/2020",
+    "cat": "Accessories",
+    "col": ["White", "Black"],
+    "img": ["assets/media-control.png"]
+  },
+  {
+    "name": "HD Camera",
+    "desc": "Featuring dual lenses for 1080p capture and a built-in kickstand, the HD Camera works seamlessly with PS5 background removal tools to put you in the spotlight.",
+    "price": 59.99,
+    "date": "19/11/2020",
+    "cat": "Accessories",
+    "col": ["White", "Black"],
+    "img": ["assets/hd-camera.webp"]
+  },
+  {
+    "name": "PlayStation Plus Deluxe",
+    "desc": "Enjoy all the main benefits of PlayStation, hundreds of games from the games catalogue, plus game trials and the classics catalogue.",
+    "price": 11.99,
+    "date": "10/5/2021",
+    "cat": "PS Plus",
+    "col": ["Yellow", "Black"],
+    "img": ["assets/ps-plus-deluxe.png"]
+  },
+  {
+    "name": "PlayStation Plus Extra",
+    "desc": "Get all the benefits of the PlayStation Plus Essential plan, plus access to the game catalog featuring hundreds of titles, from genre-defining hits to groundbreaking indie games, with new titles added regularly.",
+    "price": 10.49,
+    "date": "10/5/2021",
+    "cat": "PS Plus",
+    "col": ["Yellow", "Black"],
+    "img": ["assets/ps-plus-extra.webp"]
+  },
+  {
+    "name": "PlayStation Plus Essential",
+    "desc": "Enjoy all the main benefits of PlayStation Plus: join your friends in online multiplayer, add new games to your collection every month, get amazing offers from the PlayStation Store and much more.",
+    "price": 6.99,
+    "date": "10/5/2021",
+    "cat": "PS Plus",
+    "col": ["White", "Black"],
+    "img": ["assets/ps-plus-essential.webp"]
+  },
+  {
+    "name": "PlayStation VR",
+    "desc": "Put yourself at the center of an extraordinary universe of games with exclusive PS VR titles, all thanks to the technology of your PlayStation® console, watch the game world come to life around you, with a perfect field of vision in any direction wherever you go and experience new realities with a custom OLED display and smooth 120fps visuals for complete gaming immersion.",
+    "price": 249.99,
+    "date": "10/11/2022",
+    "cat": "Accessories",
+    "col": ["White", "Black"],
+    "img": ["assets/vr.webp"]
+  },
+  {
+    "name": "Resident Evil 4",
+    "desc": "A thrilling reimagining of Capcom's groundbreaking action-horror classic. Six years after the events of Resident Evil 2, Raccoon City survivor Leon Kennedy has been dispatched to a secluded European village to investigate the disappearance of the US president’s daughter. What he discovers there is unlike anything he has faced before.",
+    "price": 59.99,
+    "date": "03/22/2023",
+    "cat": "Games",
+    "col": ["COLOR1", "COLOR2"],
+    "img": ["assets/resident-evil.png"]
+  },
+  {
+    "name": "God of War Ragnarok",
+    "desc": "Embark on an epic and heartfelt journey as Kratos and Atreus struggle with holding on and letting go. Kratos and Atreus must journey to each of the Nine Realms in search of answers as Asgardian forces prepare for a prophesied battle that will end the world. Along the way they will explore stunning, mythical landscapes, and face fearsome enemies in the form of Norse gods and monsters.",
+    "price": 69.99,
+    "date": "11/9/2002",
+    "cat": "Games",
+    "col": ["COLOR1", "COLOR2"],
+    "img": ["assets/god-of-war.png"]
+  },
+  {
+    "name": "Horizon Forbidden West",
+    "desc": "Join Aloy as she braves the Forbidden West – a majestic but dangerous frontier that conceals mysterious new threats. The land is dying. Vicious storms and an unstoppable blight ravage the scattered remnants of humanity, while fearsome new machines prowl their borders. Life on Earth is hurtling towards another extinction, and no one knows why",
+    "price": 69.99,
+    "date": "02/18/2022",
+    "cat": "Games",
+    "col": ["COLOR1", "COLOR2"],
+    "img": ["assets/horizon.png"]
+  },
+  {
+    "name": "Marvel's Spider-Man",
+    "desc": "Experience the rise of Miles Morales as the new hero masters incredible, explosive new powers to become his own Spider-Man. In the latest adventure in the Marvel’s Spider-Man universe, teenager Miles Morales is adjusting to his new home while following in the footsteps of his mentor, Peter Parker, as a new Spider-Man.",
+    "price": 49.99,
+    "date": "11/12/2020",
+    "cat": "Games",
+    "col": ["COLOR1", "COLOR2"],
+    "img": ["assets/spider-man.png"]
+  },
+  {
+    "name": "Ratchet & Clank",
+    "desc": "Go dimension-hopping with Ratchet and Clank as they take on an evil emperor from another reality. Jump between action-packed worlds, and beyond at mind-blowing speeds – complete with dazzling visuals and an insane arsenal – as the intergalactic adventurers blast onto the PS5 console.",
+    "price": 69.99,
+    "date": "06/10/2021",
+    "cat": "Games",
+    "col": ["COLOR1", "COLOR2"],
+    "img": ["assets/ratchet-clank.png"]
+  },
+  {
+    "name": "Death Stranding",
+    "desc": "In the future, a mysterious event known as the Death Stranding has opened a doorway between the living and the dead, leading to grotesque creatures from the afterlife roaming the fallen world marred by a desolate society.",
+    "price": 59.99,
+    "date": "09/23/2021",
+    "cat": "Games",
+    "col": ["COLOR1", "COLOR2"],
+    "img": ["assets/death.png"]
+  },
+  {
+    "name": "Sackboy Adventure",
+    "desc": "The dastardly Vex (a near-mythical being born of chaos and fear, no less) kidnaps Sackboy’s friends and forces them to build his Topsy Turver. Take down Vex. Save the sack-folk. Save the day. It’s time to fulfill your destiny, Sackboy. From woolly wonderkid and hessian hero… rise our Knitted Knight.",
+    "price": 59.99,
+    "date": "11/12/2020",
+    "cat": "Games",
+    "col": ["COLOR1", "COLOR2"],
+    "img": ["assets/sackboy.png"]
+  },
+  {
+    "name": "Demons Souls",
+    "desc": "From PlayStation Studios and Bluepoint Games comes a remake of the PlayStation classic, Demon’s Souls. Entirely rebuilt from the ground up and masterfully enhanced, this remake introduces the horrors of a fog-laden, dark fantasy land to a whole new generation of gamers. Those who’ve faced its trials and tribulations before, can once again challenge the darkness in stunning visual quality with incredible performance.",
+    "price": 69.99,
+    "date": "11/12/2020",
+    "cat": "Games",
+    "col": ["COLOR1", "COLOR2"],
+    "img": ["assets/demons.png"]
+  },
+  {
+    "name": "Gran Turismo 7",
+    "desc": "With the reintroduction of the legendary GT Simulation Mode, buy, tune and race your way through a rewarding solo campaign as you unlock new cars and challenges. And if you love going head-to-head with others, hone your skills and compete in the GT Sport Mode.",
+    "price": 69.99,
+    "date": "03/94/2022",
+    "cat": "Games",
+    "col": ["COLOR1", "COLOR2"],
+    "img": ["assets/gran-turismo.png"]
+  },
+  {
+    "name": "Ghost of Tsushima",
+    "desc": "Forge a new path and wage an unconventional war for the freedom of Tsushima. Challenge opponents with your katana, master the bow to eliminate distant threats, develop stealth tactics to ambush enemies and explore a new story on Iki Island.",
+    "price": 69.99,
+    "date": "08/19/2019",
+    "cat": "Games",
+    "col": ["COLOR1", "COLOR2"],
+    "img": ["assets/ghost.png"]
+  }
+]
