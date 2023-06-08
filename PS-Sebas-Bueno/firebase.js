@@ -10,8 +10,10 @@ import {
     addDoc,
     setDoc,
     doc,
+    getDoc,
 } from "firebase/firestore";
 import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, onAuthStateChanged, signOut } from "firebase/auth";
+import {getStorage,ref, uploadBytes, getDownloadURL } from "firebase/storage"
 import { userValidation } from './userValidation.js'
 
 // Your web app's Firebase configuration
@@ -33,19 +35,36 @@ const analytics = getAnalytics(app);
 // Initialize build
 const db = getFirestore(app);
 const auth = getAuth(app);
+const storage = getStorage(app)
 
+let userId = ""
 
-onAuthStateChanged(auth, (user) => {
+const getUserInfo = async (userId) =>{
+    try {
+        const docRef = doc(db,"users",userId);
+        const docSnap = await getDoc(docRef);
+        return docSnap.data()
+    } catch (error) {
+        
+    }
+}
+
+onAuthStateChanged(auth, async (user) => {
     console.log('hubo un cambio en auth')
     if (user) {
-        // const uid = user.uid;
+         const uid = user.uid;
+         const userinfo = await getUserInfo(uid)
+         if (userinfo.admin){
+//habilitar opcion nuevo producto puede ser en la barra superior
+         }
+       // signOut(auth)
        // userValidation(true, user.email)
     } else {
+        //
        // userValidation(false)
     }
 });
-
-/* RECIVIR PRODUCTOS DEL DATABASE */
+/* RECIBIR PRODUCTOS DEL DATABASE */
 
 export async function getProdcuts() {
     const allProducts = [];
@@ -87,16 +106,18 @@ export async function createUser(userInfo) {
         const user = userCredential.user;
         console.log(user)
 
+        const urlProfile = await uploadImage(userInfo.picture)
         // Subir Imagen
         // const url = await uploadFile(user.uid+userInfo.picture.name, userInfo.picture, 'profilePictures')
 
         // crear usuario en DB
 
         const dbInfo = {
-            //url,
+            urlProfile,
             email: userInfo.email,
             birthday: userInfo.birthday,
-            username: userInfo.username
+            username: userInfo.username,
+            admin:false
         }
 
         addUserToDb(dbInfo, user.uid)
@@ -108,6 +129,20 @@ export async function createUser(userInfo) {
         alert(error.message)
     }
 
+}
+
+export async function imageUploadedReference(file) {
+    const storageRef = ref(storage, `users/images/${file.name}`)
+    return await uploadBytes(storageRef, file)
+}
+
+export async function uploadImage (file) {
+try {
+    const image = await imageUploadedReference(file)
+    return getDownloadURL(ref(storage,image.ref.fullPath))
+} catch (error) {
+    
+}
 }
 /* forma 2
 export async function createUser(email, password, username) {
