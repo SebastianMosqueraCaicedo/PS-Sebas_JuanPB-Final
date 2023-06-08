@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PlayStation</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Golos+Text:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link
+
+rel="stylesheet"
+href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
+
+>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glider-js@1.7.3/glider.min.css">
+<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css">
+
+</head>
+<body>
+
+    <!-- Aqui es el header -->
+    <header id="header-desktop"> 
+      <div class="header-block">
+        <!-- Aqui hay tres divs que contienen tres componentes diferentes del header-->
+        <div>
+            <img src="./assets/ps_logo.png" alt="">
+            <input placeholder="Search" type="text">    
+        </div>
+	<div class="header-navegacion">
+		<a href="./index.html">
+			<img src="assets/home.png">
+		</a>
+		<a href="./tienda/tienda.html">
+			<img src="assets/shop.png">
+		</a>
+		<a href="./index.html">
+			<img src="assets/cart.png">
+		</a>
+		<a href="./index.html">
+			<img src="assets/user.png">
+		</a>
+	</div>
+        <div>
+            <button onclick="window.location.href='/login/index.html';"> Log In </button>
+            <button onclick="window.location.href='/sign-up/index.html';"> Register </button>
+        </div>
+      </div>
+    </header>
+
+    <!-- Aqui es el header mobile -->
+    <header id="header-mobile"> 
+      <div class="header-block">
+            <img src="./assets/ps_logo.png" alt="">
+            <input placeholder="Search" type="text">    
+            <a href="javascript:void(0);" class="ham-icon" onclick="hamburguer()">
+            <img src="assets/menu.png">
+            </a>
+      </div>
+      <div class="ham-block">
+        <div class="header-navegacion" id="ham-hidden">
+
+            <a href="./index.html">
+                <img src="assets/home.png">
+            </a>
+            <a href="./index.html">
+                <img src="assets/shop.png">
+            </a>
+            <a href="./index.html">
+                <img src="assets/cart.png">
+            </a>
+            <a href="./index.html">
+                <img src="assets/user.png">
+            </a>
+            <div class="ham-buttons" id="ham-buttons">
+                <button> Log In </button>
+                <button> Register </button>
+            </div>
+        </div>
+      </div>
+
+
+    </header>
+    <script src="admin.js" type="module"></script>
+</body>
+</html>
