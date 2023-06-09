@@ -1,61 +1,94 @@
-/* Estilos para la pantalla de "login" */
+/* Estilos para la pantalla de "login" y otros elementos */
 * {
-    font-family: 'Golos Text', sans-serif;
-    box-sizing: border-box;
-  }
-  
-  body {
-    margin: 0;
-    background-color: #16191D;
-    color: white;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-  }
-  
-  h1 {
-    color: white;
-    margin-top: 40px;
-    text-align: center;
-  }
-  
-  form {
-    width: 400px;
-    padding: 20px;
-    background-color: #252a30;
-    border-radius: 10px;
-  }
-  
-  label {
-    display: block;
-    margin-top: 10px;
-    text-align: center;
-  }
-  
-  input[type="email"],
-  input[type="password"] {
-    width: 100%;
-    padding: 10px;
-    margin-top: 5px;
-    border-radius: 5px;
-    border: none;
-  }
-  
-  button {
-    display: block;
-    margin: 20px auto;
-    padding: 10px 20px;
-    border-radius: 5px;
-    border: none;
-    background-color: #2639ca;
-    color: white;
-    font-weight: bold;
-    cursor: pointer;
-  }
-  
-  button:hover {
-    background-color: #2639ca;
-  }
+  font-family: 'Golos Text', sans-serif;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background-color: #16191D;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+h1 {
+  color: white;
+  margin-top: 40px;
+  text-align: center;
+}
+
+form {
+  width: 400px;
+  padding: 20px;
+  background-color: #252a30;
+  border-radius: 10px;
+}
+
+label {
+  display: block;
+  margin-top: 10px;
+  text-align: center;
+}
+
+input[type="email"],
+input[type="password"] {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border-radius: 5px;
+  border: none;
+}
+
+button {
+  display: block;
+  margin: 20px auto;
+  padding: 10px 20px;
+  border-radius: 5px;
+  border: none;
+  background-color: #2639ca;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #2639ca;
+}
+
+/* Estilos adicionales para el botón de "Cerrar sesión" */
+#btn-logout {
+  background-color: #f44336;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+#btn-logout:hover {
+  background-color: #d32f2f;
+}
+
+/* Estilos adicionales para el botón de "Subir nuevo producto" del administrador */
+#btn-upload-product {
+  background-color: #4caf50;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+#btn-upload-product:hover {
+  background-color: #388e3c;
+}
+
   

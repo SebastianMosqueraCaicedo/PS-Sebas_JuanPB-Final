@@ -1,3 +1,4 @@
+import { logOut } from "./firebase.js"
 console.log("conectado")
 
 ///////// HAMBURGUER /////////
@@ -122,4 +123,24 @@ window.addEventListener('load', function(){
 			}
 		]
 	});
+
+
+const buttonlogOut = document.querySelector('#btn-logout')
+buttonlogOut.addEventListener('click', (e) => logOut(e))
+
+async function logOutUser(e) {
+	e.preventDefault();
+
+
+
+  const userOut = await logOut()
+  alert("LogOut")
+	/*if (userCreated.status) {
+		alert('Sesion iniciada, uid: ' + userCreated.info)
+	} else {
+		alert(userCreated.info)
+	}
+ 
+*/
+}
 });
