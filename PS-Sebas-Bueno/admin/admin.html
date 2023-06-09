@@ -5,7 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PlayStation</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="./admin.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Golos+Text:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -26,21 +27,21 @@ href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
       <div class="header-block">
         <!-- Aqui hay tres divs que contienen tres componentes diferentes del header-->
         <div>
-            <img src="./assets/ps_logo.png" alt="">
+            <img src="/assets/ps_logo.png" alt="">
             <input placeholder="Search" type="text">    
         </div>
 	<div class="header-navegacion">
-		<a href="./index.html">
-			<img src="assets/home.png">
+		<a href="/index.html">
+			<img src="/assets/home.png">
 		</a>
-		<a href="./tienda/tienda.html">
-			<img src="assets/shop.png">
+		<a href="/tienda/tienda.html">
+			<img src="/assets/shop.png">
 		</a>
-		<a href="./index.html">
-			<img src="assets/cart.png">
+		<a href="/index.html">
+			<img src="/assets/cart.png">
 		</a>
-		<a href="./index.html">
-			<img src="assets/user.png">
+		<a href="/index.html">
+			<img src="/assets/user.png">
 		</a>
 	</div>
         <div>
@@ -53,26 +54,26 @@ href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
     <!-- Aqui es el header mobile -->
     <header id="header-mobile"> 
       <div class="header-block">
-            <img src="./assets/ps_logo.png" alt="">
+            <img src="/assets/ps_logo.png" alt="">
             <input placeholder="Search" type="text">    
             <a href="javascript:void(0);" class="ham-icon" onclick="hamburguer()">
-            <img src="assets/menu.png">
+            <img src="/assets/menu.png">
             </a>
       </div>
       <div class="ham-block">
         <div class="header-navegacion" id="ham-hidden">
 
-            <a href="./index.html">
-                <img src="assets/home.png">
+            <a href="/index.html">
+                <img src="/assets/home.png">
             </a>
-            <a href="./index.html">
-                <img src="assets/shop.png">
+            <a href="/index.html">
+                <img src="/assets/shop.png">
             </a>
-            <a href="./index.html">
-                <img src="assets/cart.png">
+            <a href="/index.html">
+                <img src="/assets/cart.png">
             </a>
-            <a href="./index.html">
-                <img src="assets/user.png">
+            <a href="/index.html">
+                <img src="/assets/user.png">
             </a>
             <div class="ham-buttons" id="ham-buttons">
                 <button> Log In </button>
@@ -80,9 +81,34 @@ href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
             </div>
         </div>
       </div>
-
-
     </header>
+
+    <section>
+	<h2>ADMIN ONLY</h2>
+	<p>Create a new product and upload to database. Follow data types!</p>
+	<textarea minlength="2" maxlength="20" class="ad-input" type="text" 
+		 placeholder="Name: String" id="ad-name"></textarea>
+
+	<textarea minlength="2" class="ad-input" type="text" 
+		 placeholder="Description: String" id="ad-desc"></textarea>
+
+	<textarea minlength="2" maxlength="20" class="ad-input" type="text" 
+		 placeholder="Price: Float Number" id="ad-price"></textarea>
+
+	<textarea minlength="2" maxlength="20" class="ad-input" type="text" 
+		 placeholder="Date: XX/XX/XXXX" id="ad-date"></textarea>
+
+	<textarea minlength="2" maxlength="20" class="ad-input" type="text" 
+		 placeholder="Category: String" id="ad-cat"></textarea>
+
+	<textarea minlength="2" maxlength="20" class="ad-input" type="text" 
+		 placeholder="Color: Hex | None" id="ad-col"></textarea>
+
+	<textarea minlength="2" class="ad-input" type="text" 
+		 placeholder="Image: {IMAGE URL}" id="ad-img"></textarea>
+
+	<button id="ad-send"> Upload </button>
+    </section>
     <script src="admin.js" type="module"></script>
 </body>
 </html>
