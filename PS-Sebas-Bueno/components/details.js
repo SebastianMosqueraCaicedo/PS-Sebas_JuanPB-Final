@@ -1,3 +1,4 @@
+import {updateItems} from "/tienda/tienda.js"
 // divisores para mostrar detalle o tienda
 let specifications = document.getElementById("specific-product");
 let closeWindow = document.getElementById("product-section")
@@ -44,4 +45,5 @@ export function goback() {
 	while (specifications.firstChild){
 		specifications.removeChild(specifications.firstChild);
 	}
+	updateItems();
 }

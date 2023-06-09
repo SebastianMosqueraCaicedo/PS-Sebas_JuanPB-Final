@@ -53,6 +53,9 @@ onAuthStateChanged(auth, async (user) => {
     if (user) {
       const uid = user.uid;
       const userinfo = await getUserInfo(uid);
+	    document.getElementById('btn-logout').style.display = "block";
+	    console.log(userinfo);
+	    document.getElementById('nav-pfp').src = userinfo.urlProfile;
       if (userinfo.admin) {
         // Habilitar opción "Nuevo producto" en la barra superior
         console.log("Usuario administrador autenticado.");
@@ -62,26 +65,28 @@ onAuthStateChanged(auth, async (user) => {
     }
   });
 
+const btnUploadProduct = document.getElementById("btn-upload-product");
   onAuthStateChanged(auth, async (user) => {
-    const btnUploadProduct = document.getElementById("btn-upload-product");
-  
-    if (user) {
-      const uid = user.uid;
-      const userinfo = await getUserInfo(uid);
-      console.log(userinfo)
-  
-      if (userinfo.admin) {
-        // Si el usuario es un administrador, mostrar el botón
-        btnUploadProduct.style.display = "block";
-        btnUploadProduct.addEventListener("click", uploadProduct);
-        console.log(userinfo)
-      } else {
-        // Si el usuario no es un administrador, ocultar el botón
-        btnUploadProduct.style.display = "none";
-      }
-    } else {
-      // Si no hay usuario autenticado, ocultar el botón
-      btnUploadProduct.style.display = "none";
+    if(btnUploadProduct != undefined) {
+	  
+	    if (user) {
+	      const uid = user.uid;
+	      const userinfo = await getUserInfo(uid);
+	      console.log(userinfo)
+	  
+	      if (userinfo.admin) {
+		// Si el usuario es un administrador, mostrar el botón
+		btnUploadProduct.style.display = "block";
+		btnUploadProduct.addEventListener("click", uploadProduct);
+		console.log(userinfo)
+	      } else {
+		// Si el usuario no es un administrador, ocultar el botón
+		btnUploadProduct.style.display = "none";
+	      }
+	    } else {
+	      // Si no hay usuario autenticado, ocultar el botón
+	      btnUploadProduct.style.display = "none";
+	    }
     }
   });
   

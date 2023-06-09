@@ -540,3 +540,15 @@ footer p {
 .swiper-wrapper img{
     margin-left: 60px;
 } }
+
+p#cart-num {
+	color: red;
+	text-decoration: unset;
+	margin: -20px 9px;
+	text-align: end;
+	font-weight: 600;
+}
+
+#nav-pfp {
+	width: 50px;
+}
