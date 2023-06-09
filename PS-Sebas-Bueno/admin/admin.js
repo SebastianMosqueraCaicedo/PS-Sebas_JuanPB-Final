@@ -21,16 +21,12 @@ let newItem = {
 	"img": [""]
 }
 
-function checkTypes(){
-}
-
-function checkLength(){
-}
-
 function uploadItem(){
+	let num_price = Number(ad_price.value);
+
 	newItem.name = ad_name.value;
 	newItem.desc = ad_desc.value;
-	newItem.price = ad_price.value;
+	newItem.price = num_price;
 	newItem.date = ad_date.value;
 	newItem.cat = ad_cat.value;
 	newItem.col = ad_col.value;
