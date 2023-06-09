@@ -93,7 +93,9 @@ function updateItems() {
 
 			let button = document.createElement("button");
 			button.value = j;
-			button.setAttribute("onclick", "setDetailsInfo(itemsFilter[this.value])");
+			button.addEventListener("click", function (e) 
+				{setDetailsInfo(itemsFilter[e.target.value]);}
+			);
 			button.textContent = "See More";
 
 			section.append(button);

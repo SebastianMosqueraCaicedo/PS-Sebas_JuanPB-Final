@@ -5,8 +5,7 @@ let closeWindow = document.getElementById("product-section")
 export function setDetailsInfo(obj__) {
     specifications.style.display = "flex"
     specifications.innerHTML= 
-    `<button class="store-product-back" 
-    	onclick=goback()><img src="/assets/back.png"></button>
+    `<button class="store-product-back" id="back"><img src="/assets/back.png"></button>
     <img id="img-producto" class="store-product-img" src="${obj__.img[0]}">  
     <section id="specific-info" class="store-product-section">
         <h1 id="specific-name" class="store-product-name"> ${obj__.name}</h1>
@@ -31,6 +30,9 @@ export function setDetailsInfo(obj__) {
 </div>
     </section>`;
 
+	document.getElementById('back').addEventListener("click", function (e){
+		goback();
+	});
     closeWindow.style.display = "none";
 }
 
