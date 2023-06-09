@@ -1,0 +1,29 @@
+html {
+	background-color: #f1f1f1;
+}
+
+body {
+	background-color: unset;
+}
+
+h2 {
+	color: red;
+}
+
+section {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+textarea {
+	margin-bottom: 10px;
+}
+
+button {
+	margin-top: 10px;
+}
+
+#ad-desc {
+	height: 100px
+}
