@@ -25,63 +25,10 @@ href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
 
      <!-- Aqui es el header -->
      <header id="header-desktop">
-       <div class="header-block">
-         <!-- Aqui hay tres divs que contienen tres componentes diferentes del header-->
-         <div>
-             <img src="../assets/ps_logo.png" alt="">
-             <input placeholder="Search" type="text" id="item-search">
-         </div>
-         <div class="header-navegacion">
-                 <a href="../index.html">
-                         <img src="../assets/home.png">
-                 </a>
-                 <a href="./tienda.html">
-                         <img src="../assets/shop.png">
-                 </a>
-                 <a href="../index.html">
-                         <img src="../assets/cart.png">
-                 </a>
-                 <a href="../index.html">
-                         <img src="../assets/user.png">
-                 </a>
-         </div>
-         <div>
-             <button> Log In </button>
-             <button> Register </button>
-         </div>
-       </div>
      </header>
 
      <!-- Aqui es el header mobile -->
      <header id="header-mobile">
-       <div class="header-block">
-             <img src="../assets/ps_logo.png" alt="">
-             <input placeholder="Search" type="text">
-             <a href="javascript:void(0);" class="ham-icon" onclick="hamburguer()">
-             <img src="../assets/menu.png">
-             </a>
-       </div>
-       <div class="ham-block">
-         <div class="header-navegacion" id="ham-hidden">
-
-             <a href="../index.html">
-                 <img src="../assets/home.png">
-             </a>
-             <a href="./index.html">
-                 <img src="../assets/shop.png">
-             </a>
-             <a href="./index.html">
-                 <img src="../assets/cart.png">
-             </a>
-             <a href="./index.html">
-                 <img src="../assets/user.png">
-             </a>
-             <div class="ham-buttons" id="ham-buttons">
-                 <button> Log In </button>
-                 <button> Register </button>
-             </div>
-         </div>
-       </div>
 
      </header>
 
@@ -101,15 +48,18 @@ href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
 			<line x1="0" y1="0" x2="100" y2="0" stroke="black" />
 		</svg>
         </section>
+	<section id="mock">
+		<h2>Please sign up or log in</h2>
+	</section>
     </div>
 
     <!-- Botones desicion carro -->
 
     <div class="carro-fin">
-	    <h2 id="final"></h2>
+	    <h2 id="final mock"></h2>
 	    <div>
-		    <button class="but-carro" id="clear-all"> Clear </button>
-		    <button class="but-carro" id="buy-all"> BUY </button>
+		    <button class="but-carro" id="clear-all mock"> Clear </button>
+		    <button class="but-carro" id="buy-all mock"> BUY </button>
 	    </div>
     </div>
 
@@ -122,6 +72,12 @@ href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
     
     
     <script src="./carrito.js" type="module"></script>
+    <script src="/components/header.js"></script>
+    <script type="text/javascript">
+            document.getElementById('header-mobile').innerHTML = HeaderMobile();
+            document.getElementById('header-desktop').innerHTML = HeaderDesktop();
+    </script>
+    <script src="/components/cartCount.js"></script>
     
 </body>
 </html>

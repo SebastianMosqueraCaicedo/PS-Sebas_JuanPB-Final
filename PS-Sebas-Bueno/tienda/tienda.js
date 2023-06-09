@@ -1,5 +1,5 @@
-import {getProdcuts, addProductWithId} from '../firebase.js'
-import {setDetailsInfo, goback} from '/tienda/details.js'
+import {getProdcuts, addProductWithId} from '/firebase.js'
+import {setDetailsInfo, goback} from '/components/details.js'
 
 // product db
 let allProducts;
@@ -20,6 +20,7 @@ async function updateProducts(){
 	itemsFilter = await getProdcuts();
 }
 
+/* memoria carrito*/
 let cart = [];
 
 function assignLS() { 
@@ -30,8 +31,23 @@ function assignLS() {
 	}
 };
 
-cart = assignLS();
 
+function updateCart() {
+	cart = assignLS();
+	cart = cart.filter(function (element, index){
+		if(element !== 'undefined') {
+			return element;
+		}	
+	});
+	if (localStorage['add'] !== 'undefined') {
+		cart.push(localStorage['add']);
+		localStorage['cart'] = JSON.stringify(cart);
+		console.log(localStorage['cart']);
+		localStorage['add'] = undefined;
+	}
+}
+
+/* filtros */
 function catFilter() {
 	fValue = filterInput.value;
 	updateItems();
@@ -69,10 +85,9 @@ function clearFilters() {
 	filterItems();
 }
 
-function updateItems() {
+export function updateItems() {
 	const itemList = document.getElementById("store-list-section");
 	console.log(itemsFilter);
-	console.log(items);
 
 	while (itemList.firstChild){
 		itemList.removeChild(itemList.firstChild);
@@ -116,9 +131,7 @@ function updateItems() {
 			itemList.append(article);
 		}
 	}
-	console.log(localStorage['add']);
-	console.log(localStorage['cart']);
-	console.log(cart);
+	updateCart();
 }
 
 function setColor(color) {
@@ -138,9 +151,7 @@ function setColor(color) {
 await updateProducts();
 updateItems();
 
-if (localStorage['add'] != undefined) {
-	cart.push(localStorage['add']);
-	localStorage['cart'] = JSON.stringify(cart);
-	console.log(localStorage['cart']);
-	localStorage['add'] = undefined;
-}
+const adminBut = document.getElementById('ad-product');
+adminBut.addEventListener('click', function(e) {
+	window.location = '/admin/admin.html';
+});

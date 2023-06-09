@@ -53,6 +53,10 @@ onAuthStateChanged(auth, async (user) => {
     if (user) {
       const uid = user.uid;
       const userinfo = await getUserInfo(uid);
+	    document.getElementById('btn-logout').style.display = "block";
+	    document.getElementById('btn-logout').addEventListener('click', logOut);
+	    console.log(userinfo);
+	    document.getElementById('nav-pfp').src = userinfo.urlProfile;
       if (userinfo.admin) {
         // Habilitar opción "Nuevo producto" en la barra superior
         console.log("Usuario administrador autenticado.");
@@ -62,27 +66,40 @@ onAuthStateChanged(auth, async (user) => {
     }
   });
 
+const btnUploadProduct = document.getElementById("ad-product");
+const storeList = document.getElementById('store-list-section');
+const mock = document.getElementById('mock');
   onAuthStateChanged(auth, async (user) => {
-    const btnUploadProduct = document.getElementById("btn-upload-product");
-  
-    if (user) {
-      const uid = user.uid;
-      const userinfo = await getUserInfo(uid);
-      console.log(userinfo)
-  
-      if (userinfo.admin) {
-        // Si el usuario es un administrador, mostrar el botón
-        btnUploadProduct.style.display = "block";
-        btnUploadProduct.addEventListener("click", uploadProduct);
-        console.log(userinfo)
-      } else {
-        // Si el usuario no es un administrador, ocultar el botón
-        btnUploadProduct.style.display = "none";
-      }
-    } else {
-      // Si no hay usuario autenticado, ocultar el botón
-      btnUploadProduct.style.display = "none";
+    if(btnUploadProduct != undefined) {
+	  
+	    if (user) {
+	      const uid = user.uid;
+	      const userinfo = await getUserInfo(uid);
+	      console.log(userinfo)
+	  
+	      if (userinfo.admin) {
+		// Si el usuario es un administrador, mostrar el botón
+		btnUploadProduct.style.display = "block";
+		console.log(userinfo)
+	      } else {
+		// Si el usuario no es un administrador, ocultar el botón
+		btnUploadProduct.style.display = "none";
+	      }
+	    } else {
+	      // Si no hay usuario autenticado, ocultar el botón
+	      btnUploadProduct.style.display = "none";
+	    }
     }
+	  if ( storeList != undefined) {
+	    if (user) {
+		    storeList.style.display = "flex";
+		    mock.style.display = "none";
+	    } else {
+		    storeList.style.display = "none";
+		    mock.style.display = "block";
+	    }
+
+	  }
   });
   
   
@@ -203,6 +220,8 @@ export async function logOut() {
     }).catch((error) => {
     // An error happened.
     });
+	window.alert('Logged out');
+	window.location = '/index.html';
 }
 export async function addUserToDb(userInfo, id) {
 
