@@ -5,7 +5,6 @@ function checkAmnt() {
 	if (localStorage['cart'] !== undefined) {
 		tempCart = JSON.parse(localStorage['cart']);
 		tempCart = removeDuplicates(tempCart);
-		console.log(tempCart);
 		amnt = tempCart.length;
 		
 		p.textContent = amnt.toString();

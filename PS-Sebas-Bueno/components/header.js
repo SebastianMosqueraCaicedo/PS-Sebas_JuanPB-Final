@@ -15,7 +15,7 @@ function HeaderDesktop() {
             </a>
             <a href="/carrito/carrito.html">
               <img src="/assets/cart.png">
-	      <p id="cart-num"></p>
+	      <p id="cart-num mock"></p>
             </a>
             <a>
               <img id="nav-pfp" src="/assets/user.png">

@@ -151,3 +151,7 @@ function setColor(color) {
 await updateProducts();
 updateItems();
 
+const adminBut = document.getElementById('ad-product');
+adminBut.addEventListener('click', function(e) {
+	window.location = '/admin/admin.html';
+});
