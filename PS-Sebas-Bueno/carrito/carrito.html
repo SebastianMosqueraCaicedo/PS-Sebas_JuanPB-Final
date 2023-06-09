@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PlayStation</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="./carrito.css">
+    <link rel="stylesheet" href="../producto/producto.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Golos+Text:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link
+
+rel="stylesheet"
+href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
+
+>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glider-js@1.7.3/glider.min.css">
+<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css">
+
+</head>
+<body>
+
+     <!-- Aqui es el header -->
+     <header id="header-desktop">
+       <div class="header-block">
+         <!-- Aqui hay tres divs que contienen tres componentes diferentes del header-->
+         <div>
+             <img src="../assets/ps_logo.png" alt="">
+             <input placeholder="Search" type="text" id="item-search">
+         </div>
+         <div class="header-navegacion">
+                 <a href="../index.html">
+                         <img src="../assets/home.png">
+                 </a>
+                 <a href="./tienda.html">
+                         <img src="../assets/shop.png">
+                 </a>
+                 <a href="../index.html">
+                         <img src="../assets/cart.png">
+                 </a>
+                 <a href="../index.html">
+                         <img src="../assets/user.png">
+                 </a>
+         </div>
+         <div>
+             <button> Log In </button>
+             <button> Register </button>
+         </div>
+       </div>
+     </header>
+
+     <!-- Aqui es el header mobile -->
+     <header id="header-mobile">
+       <div class="header-block">
+             <img src="../assets/ps_logo.png" alt="">
+             <input placeholder="Search" type="text">
+             <a href="javascript:void(0);" class="ham-icon" onclick="hamburguer()">
+             <img src="../assets/menu.png">
+             </a>
+       </div>
+       <div class="ham-block">
+         <div class="header-navegacion" id="ham-hidden">
+
+             <a href="../index.html">
+                 <img src="../assets/home.png">
+             </a>
+             <a href="./index.html">
+                 <img src="../assets/shop.png">
+             </a>
+             <a href="./index.html">
+                 <img src="../assets/cart.png">
+             </a>
+             <a href="./index.html">
+                 <img src="../assets/user.png">
+             </a>
+             <div class="ham-buttons" id="ham-buttons">
+                 <button> Log In </button>
+                 <button> Register </button>
+             </div>
+         </div>
+       </div>
+
+     </header>
+
+    <!-- Division de tienda -->
+
+    <div id="product-section" >
+
+        <section class="store-title-section">
+            <h2>PRODUCTS FOR YOU</h3>
+    
+        <!-- select de filtrado -->
+    
+        <select class="store-select" id="store-filter" onselectionchange=catFilter()>
+            <option value="">All</option>
+            <option value="Consoles">Consoles</option>
+            <option value="Accessories">Accessories</option>
+            <option value="PS Plus">PS Plus</option>
+            <option value="Games">Games</option>
+        </select>
+
+	<input placeholder="Min price" type="text" id="pr-min">
+	<input placeholder="Max price" type="text" id="pr-max">
+	
+	<button id="button-update"> Filter </button>
+	<button onclick=clearFilters() id="button-update"> Clear </button>
+    
+        </section>
+    
+        <!-- Lista de objetos -->
+    
+        <section class="store-list-section" id="store-list-section">
+    
+            <article class="store-list-article" id="article">
+                <img class="store-article-img" src="../assets/vr.webp">
+                <section>
+                    <h3 id="tienda-seccion-nombre">NAME</h3>
+                    <p>description esat ase flsekj  aslekfj si jsdaofi sdifu  jlk hsalkdj fa iusa iofjs agwrgheraghj  jlaksnd flkjsa faijerhgael jrighajlethgaekjlthglkaejglkhejtsgklsrtlgbkrshtljkgoskñelrjgvlksernjgklesrn lkjg</p>
+                    <button onclick=returnDetails()> Buy now</button>
+                </section>
+            </article>
+    
+        </section>
+    </div>
+
+    <!-- division producto detalle -->
+    <div id="specific-product" > 
+
+    </div>
+
+
+    <!-- Aqui es el footer -->
+    <footer>
+        <img src="../assets/logo-sony-interactive.png">
+        <p>© 2023 Sony Interactive Entertainment LLC
+            All content, game titles, trade names and/or comercial images, trademarks, art and associated images are trademarks and/or copyrighted material of their respective owners. All rights reserved</p>
+    </footer>
+    
+    
+    <script src="./carrito.js" type="module"></script>
+    
+</body>
+</html>
