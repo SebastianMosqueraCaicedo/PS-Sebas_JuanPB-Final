@@ -20,6 +20,8 @@ async function updateProducts(){
 	itemsFilter = await getProdcuts();
 }
 
+let cart = [];
+cart = cart.concat(localStorage['cart']);
 
 function catFilter() {
 	fValue = filterInput.value;
@@ -105,6 +107,8 @@ function updateItems() {
 			itemList.append(article);
 		}
 	}
+	console.log(localStorage['add']);
+	console.log(localStorage['cart']);
 }
 
 function setColor(color) {
@@ -123,3 +127,10 @@ function setColor(color) {
 
 await updateProducts();
 updateItems();
+
+if (localStorage['add'] != undefined) {
+	cart.push(localStorage['add']);
+	localStorage['cart'] = cart;
+	console.log(localStorage['cart']);
+	localStorage['add'] = undefined;
+}

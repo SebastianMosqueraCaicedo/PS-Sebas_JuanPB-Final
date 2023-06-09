@@ -19,11 +19,7 @@ export function setDetailsInfo(obj__) {
 		<div class="color-option" onclick="setColor('green')" style="background-color: green;"></div>
 		<div class="color-option" onclick="setColor('yellow')" style="background-color: yellow;"></div>
 	  </div>
-	<button class="store-product-button" onclick=addItem()> Add to cart </button>
-
-<div id="product-container">
-  <!-- Contenido del producto aquí -->
-</div>
+	<button class="store-product-button" id="addCart" value='${obj__.name}'> Add to cart </button>
 
 <div id="product-container">
   <!-- Contenido del producto aquí -->
@@ -31,6 +27,11 @@ export function setDetailsInfo(obj__) {
     </section>`;
 
 	document.getElementById('back').addEventListener("click", function (e){
+		goback();
+	});
+
+	document.getElementById('addCart').addEventListener("click", function (e){
+		localStorage['add'] = e.target.value;
 		goback();
 	});
     closeWindow.style.display = "none";
