@@ -21,7 +21,16 @@ async function updateProducts(){
 }
 
 let cart = [];
-cart = cart.concat(localStorage['cart']);
+
+function assignLS() { 
+	if (localStorage['cart'] != undefined){
+		return cart.concat(JSON.parse(localStorage['cart']));
+	} else {
+		return [];
+	}
+};
+
+cart = assignLS();
 
 function catFilter() {
 	fValue = filterInput.value;
@@ -109,6 +118,7 @@ function updateItems() {
 	}
 	console.log(localStorage['add']);
 	console.log(localStorage['cart']);
+	console.log(cart);
 }
 
 function setColor(color) {
@@ -130,7 +140,7 @@ updateItems();
 
 if (localStorage['add'] != undefined) {
 	cart.push(localStorage['add']);
-	localStorage['cart'] = cart;
+	localStorage['cart'] = JSON.stringify(cart);
 	console.log(localStorage['cart']);
 	localStorage['add'] = undefined;
 }

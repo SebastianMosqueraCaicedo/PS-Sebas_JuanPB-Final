@@ -134,7 +134,7 @@
 	margin: 5px 0;
 }
 
-button {
+.store-list-section button {
 	margin-top: 30px;
 	width: 20%;
 	height: 30px;
@@ -144,4 +144,30 @@ button {
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
+}
+
+#final {
+	font-size: 40px;
+	align-self: center;
+	margin-top: 50px;
+}
+
+.carro-fin div {
+	align-self: center;
+}
+
+.but-carro {
+	width: 100px;
+	height: 60px;
+	font-size: 20px;
+	margin: 0px 11px;
+	margin-bottom: 100px;
+}
+
+h2 {
+	text-align: center;
+}
+
+.carro-fin div {
+	text-align-last: center;
 }
