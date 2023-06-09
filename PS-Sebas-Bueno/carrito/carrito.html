@@ -5,9 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PlayStation</title>
-    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="/style.css">
     <link rel="stylesheet" href="./carrito.css">
-    <link rel="stylesheet" href="../producto/producto.css">
+    <link rel="stylesheet" href="/producto/producto.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Golos+Text:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -90,47 +90,28 @@ href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
     <div id="product-section" >
 
         <section class="store-title-section">
-            <h2>PRODUCTS FOR YOU</h3>
-    
-        <!-- select de filtrado -->
-    
-        <select class="store-select" id="store-filter" onselectionchange=catFilter()>
-            <option value="">All</option>
-            <option value="Consoles">Consoles</option>
-            <option value="Accessories">Accessories</option>
-            <option value="PS Plus">PS Plus</option>
-            <option value="Games">Games</option>
-        </select>
-
-	<input placeholder="Min price" type="text" id="pr-min">
-	<input placeholder="Max price" type="text" id="pr-max">
-	
-	<button id="button-update"> Filter </button>
-	<button onclick=clearFilters() id="button-update"> Clear </button>
-    
+            <h2>Welcome back</h2>
         </section>
     
         <!-- Lista de objetos -->
     
         <section class="store-list-section" id="store-list-section">
-    
-            <article class="store-list-article" id="article">
-                <img class="store-article-img" src="../assets/vr.webp">
-                <section>
-                    <h3 id="tienda-seccion-nombre">NAME</h3>
-                    <p>description esat ase flsekj  aslekfj si jsdaofi sdifu  jlk hsalkdj fa iusa iofjs agwrgheraghj  jlaksnd flkjsa faijerhgael jrighajlethgaekjlthglkaejglkhejtsgklsrtlgbkrshtljkgoskñelrjgvlksernjgklesrn lkjg</p>
-                    <button onclick=returnDetails()> Buy now</button>
-                </section>
-            </article>
-    
+		<h1>Loading...</h1>
+		<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+			<line x1="0" y1="0" x2="100" y2="0" stroke="black" />
+		</svg>
         </section>
     </div>
 
-    <!-- division producto detalle -->
-    <div id="specific-product" > 
+    <!-- Botones desicion carro -->
 
+    <div class="carro-fin">
+	    <h2 id="final"></h2>
+	    <div>
+		    <button class="but-carro" id="clear-all"> Clear </button>
+		    <button class="but-carro" id="buy-all"> BUY </button>
+	    </div>
     </div>
-
 
     <!-- Aqui es el footer -->
     <footer>

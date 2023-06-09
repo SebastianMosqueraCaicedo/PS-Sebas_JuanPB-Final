@@ -6,7 +6,7 @@
     "date": "15/11/2013",
     "cat": "Consoles",
     "col": ["Black", "Gold"],
-    "img": ["assets/ps4.webp"]
+    "img": ["/assets/ps4.webp"]
   },
   {
     "name": "PlayStation 5",
@@ -15,7 +15,7 @@
     "date": "12/11/2020",
     "cat": "Consoles",
     "col": ["White", "Black"],
-    "img": ["assets/ps5.webp"]
+    "img": ["/assets/ps5.webp"]
   },
   {
     "name": "DualSense Wireless Controller",
@@ -24,7 +24,7 @@
     "date": "12/11/2020",
     "cat": "Accessories",
     "col": ["Black", "Red"],
-    "img": ["assets/control.png"]
+    "img": ["/assets/control.png"]
   },
   {
     "name": "PULSE 3D Wireless Headphones",
@@ -33,7 +33,7 @@
     "date": "20/8/2021",
     "cat": "Accessories",
     "col": ["White", "Silver"],
-    "img": ["assets/pulse-headset.webp"]
+    "img": ["/assets/pulse-headset.webp"]
   },
   {
     "name": "Media Control",
@@ -42,7 +42,7 @@
     "date": "12/11/2020",
     "cat": "Accessories",
     "col": ["White", "Black"],
-    "img": ["assets/media-control.png"]
+    "img": ["/assets/media-control.png"]
   },
   {
     "name": "HD Camera",
@@ -51,7 +51,7 @@
     "date": "19/11/2020",
     "cat": "Accessories",
     "col": ["White", "Black"],
-    "img": ["assets/hd-camera.webp"]
+    "img": ["/assets/hd-camera.webp"]
   },
   {
     "name": "PlayStation Plus Deluxe",
@@ -60,7 +60,7 @@
     "date": "10/5/2021",
     "cat": "PS Plus",
     "col": ["Yellow", "Black"],
-    "img": ["assets/ps-plus-deluxe.png"]
+    "img": ["/assets/ps-plus-deluxe.png"]
   },
   {
     "name": "PlayStation Plus Extra",
@@ -69,7 +69,7 @@
     "date": "10/5/2021",
     "cat": "PS Plus",
     "col": ["Yellow", "Black"],
-    "img": ["assets/ps-plus-extra.webp"]
+    "img": ["/assets/ps-plus-extra.webp"]
   },
   {
     "name": "PlayStation Plus Essential",
@@ -78,7 +78,7 @@
     "date": "10/5/2021",
     "cat": "PS Plus",
     "col": ["White", "Black"],
-    "img": ["assets/ps-plus-essential.webp"]
+    "img": ["/assets/ps-plus-essential.webp"]
   },
   {
     "name": "PlayStation VR",
@@ -87,7 +87,7 @@
     "date": "10/11/2022",
     "cat": "Accessories",
     "col": ["White", "Black"],
-    "img": ["assets/vr.webp"]
+    "img": ["/assets/vr.webp"]
   },
   {
     "name": "Resident Evil 4",
@@ -96,7 +96,7 @@
     "date": "03/22/2023",
     "cat": "Games",
     "col": ["COLOR1", "COLOR2"],
-    "img": ["assets/resident-evil.png"]
+    "img": ["/assets/resident-evil.png"]
   },
   {
     "name": "God of War Ragnarok",
@@ -105,7 +105,7 @@
     "date": "11/9/2002",
     "cat": "Games",
     "col": ["COLOR1", "COLOR2"],
-    "img": ["assets/god-of-war.png"]
+    "img": ["/assets/god-of-war.png"]
   },
   {
     "name": "Horizon Forbidden West",
@@ -114,7 +114,7 @@
     "date": "02/18/2022",
     "cat": "Games",
     "col": ["COLOR1", "COLOR2"],
-    "img": ["assets/horizon.png"]
+    "img": ["/assets/horizon.png"]
   },
   {
     "name": "Marvel's Spider-Man",
@@ -123,7 +123,7 @@
     "date": "11/12/2020",
     "cat": "Games",
     "col": ["COLOR1", "COLOR2"],
-    "img": ["assets/spider-man.png"]
+    "img": ["/assets/spider-man.png"]
   },
   {
     "name": "Ratchet & Clank",
@@ -132,7 +132,7 @@
     "date": "06/10/2021",
     "cat": "Games",
     "col": ["COLOR1", "COLOR2"],
-    "img": ["assets/ratchet-clank.png"]
+    "img": ["/assets/ratchet-clank.png"]
   },
   {
     "name": "Death Stranding",
@@ -141,7 +141,7 @@
     "date": "09/23/2021",
     "cat": "Games",
     "col": ["COLOR1", "COLOR2"],
-    "img": ["assets/death.png"]
+    "img": ["/assets/death.png"]
   },
   {
     "name": "Sackboy Adventure",
@@ -150,7 +150,7 @@
     "date": "11/12/2020",
     "cat": "Games",
     "col": ["COLOR1", "COLOR2"],
-    "img": ["assets/sackboy.png"]
+    "img": ["/assets/sackboy.png"]
   },
   {
     "name": "Demons Souls",
@@ -159,7 +159,7 @@
     "date": "11/12/2020",
     "cat": "Games",
     "col": ["COLOR1", "COLOR2"],
-    "img": ["assets/demons.png"]
+    "img": ["/assets/demons.png"]
   },
   {
     "name": "Gran Turismo 7",
@@ -168,7 +168,7 @@
     "date": "03/94/2022",
     "cat": "Games",
     "col": ["COLOR1", "COLOR2"],
-    "img": ["assets/gran-turismo.png"]
+    "img": ["/assets/gran-turismo.png"]
   },
   {
     "name": "Ghost of Tsushima",
@@ -177,6 +177,6 @@
     "date": "08/19/2019",
     "cat": "Games",
     "col": ["COLOR1", "COLOR2"],
-    "img": ["assets/ghost.png"]
+    "img": ["/assets/ghost.png"]
   }
 ]
