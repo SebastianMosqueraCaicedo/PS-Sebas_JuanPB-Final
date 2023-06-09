@@ -97,3 +97,51 @@
 }
 
 
+/* carrito */
+
+.store-list-section {
+	flex-direction: column;
+	padding: 10px 20%;
+}
+
+.store-list-section article {
+	width: unset;
+	height: 300px;
+}
+
+.store-list-section img {
+	margin: 5%;
+	width: 20%;
+	object-fit: contain;
+	border-radius: unset;
+}
+
+.store-list-section section {
+	height: 100%;
+	width: 100%;
+	padding: 0 25px;
+	border-radius: 0px 30px 30px 0px;
+}
+
+.store-list-article {
+	flex-direction: row;
+	align-items: center;
+}
+
+.store-list-section p, h3, h4 {
+	width: unset;
+	max-width: unset;
+	margin: 5px 0;
+}
+
+button {
+	margin-top: 30px;
+	width: 20%;
+	height: 30px;
+}
+
+.store-list-article section {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
