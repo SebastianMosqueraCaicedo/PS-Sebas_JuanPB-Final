@@ -1,4 +1,3 @@
-
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
 import { getAnalytics } from "firebase/analytics";
@@ -50,22 +49,64 @@ const getUserInfo = async (userId) =>{
 }
 
 onAuthStateChanged(auth, async (user) => {
-    console.log('hubo un cambio en auth')
+    console.log("Hubo un cambio en la autenticación.");
     if (user) {
-         const uid = user.uid;
-         const userinfo = await getUserInfo(uid)
-         if (userinfo.admin){
-//habilitar opcion nuevo producto puede ser en la barra superior
-         }
-       // signOut(auth)
-       // userValidation(true, user.email)
+      const uid = user.uid;
+      const userinfo = await getUserInfo(uid);
+      if (userinfo.admin) {
+        // Habilitar opción "Nuevo producto" en la barra superior
+        console.log("Usuario administrador autenticado.");
+      }
     } else {
-        //
-       // userValidation(false)
+      console.log("No hay usuario autenticado.");
     }
-});
-/* RECIBIR PRODUCTOS DEL DATABASE */
+  });
 
+  onAuthStateChanged(auth, async (user) => {
+    const btnUploadProduct = document.getElementById("btn-upload-product");
+  
+    if (user) {
+      const uid = user.uid;
+      const userinfo = await getUserInfo(uid);
+      console.log(userinfo)
+  
+      if (userinfo.admin) {
+        // Si el usuario es un administrador, mostrar el botón
+        btnUploadProduct.style.display = "block";
+        btnUploadProduct.addEventListener("click", uploadProduct);
+        console.log(userinfo)
+      } else {
+        // Si el usuario no es un administrador, ocultar el botón
+        btnUploadProduct.style.display = "none";
+      }
+    } else {
+      // Si no hay usuario autenticado, ocultar el botón
+      btnUploadProduct.style.display = "none";
+    }
+  });
+  
+  
+  async function uploadProduct() {
+    // Verificar si el usuario actual es administrador
+    const user = auth.currentUser;
+    const uid = user.uid;
+    const userinfo = await getUserInfo(uid);
+  
+    if (!userinfo.admin) {
+      console.log("Acceso denegado. Solo los administradores pueden subir nuevos productos.");
+      return;
+    }
+     const product = {
+      name: "Nuevo producto",
+      price: 19.99,
+      description: "Descripción del nuevo producto",
+    };
+    addNewProduct(product);
+  }
+  
+  
+
+  /* RECIBIR PRODUCTOS DEL DATABASE */
 export async function getProdcuts() {
     const allProducts = [];
 
@@ -107,10 +148,7 @@ export async function createUser(userInfo) {
         console.log(user)
 
         const urlProfile = await uploadImage(userInfo.picture)
-        // Subir Imagen
-        // const url = await uploadFile(user.uid+userInfo.picture.name, userInfo.picture, 'profilePictures')
 
-        // crear usuario en DB
 
         const dbInfo = {
             urlProfile,
@@ -144,35 +182,7 @@ try {
     
 }
 }
-/* forma 2
-export async function createUser(email, password, username) {
-    try {
-        const userCredential = await createUserWithEmailAndPassword(
-            auth,
-            email,
-            password
-        );
 
-        // Signed in
-        const user = userCredential.user;
-         console.log("usuario creado con ->", user.uid);
-
-        // subir imagen
-        //const imageUrl = await uploadFile(file.name, file, 'users');
-	
-
-        /// crear registro en BD
-        // await addUserToDB({username, imageUrl, email},user.uid)
-        await addUserToDB({username, email},user.uid)
-
-        return { status: true, info: user.uid };
-    } catch (error) {
-        const errorCode = error.code;
-        const errorMessage = error.message;
-        return { status: false, info: errorMessage };
-    }
-}
-*/
 export async function logInUser(email, password) {
     try {
         const userCredential = await signInWithEmailAndPassword(auth, email, password)
@@ -187,14 +197,13 @@ export async function logInUser(email, password) {
 }
 
 export async function logOut() {
-
-    try {
-        await signOut(auth)
-    } catch (error) {
-        console.error(error)
-    };
+    const auth = getAuth();
+    signOut(auth).then(() => {
+    console.log("Log out");
+    }).catch((error) => {
+    // An error happened.
+    });
 }
-
 export async function addUserToDb(userInfo, id) {
 
     try {
@@ -204,21 +213,23 @@ export async function addUserToDb(userInfo, id) {
         console.error("Error adding user: ", e);
     }
 }
-
-/* forma 2
-export async function addUserToDB(userData, uid) {
-    console.log('userData ---->', userData)
-    console.log('uid ---->', uid)
+// Agregar un nuevo producto a la base de datos
+export async function addNewProduct(product) {
     try {
-        const docRef = await setDoc(doc(db, "users", uid), userData);
-
-        console.log(docRef)
-
-        console.log("User written with ID: ", uid);
-    } catch (e) {
-        console.error("Error adding user: ", e);
+      // Verificar si el usuario actual es administrador
+      const user = auth.currentUser;
+      const uid = user.uid;
+      const userinfo = await getUserInfo(uid);
+  
+      if (!userinfo.admin) {
+        throw new Error("Acceso denegado. Solo los administradores pueden subir nuevos productos.");
+      }
+  
+      // Subir el nuevo producto a la base de datos
+      await addProduct(product);
+      console.log("Nuevo producto agregado con éxito.");
+    } catch (error) {
+      console.error("Error al agregar el nuevo producto: ", error);
     }
-}
-*/
-
-console.log("firebase conectao")
+  }
+console.log("firebase conectado")
