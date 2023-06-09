@@ -28,15 +28,15 @@ function setDetailsInfo(obj__) {
     specifications.style.display = "flex"
     specifications.innerHTML= 
     `<button class="store-product-back" 
-    	onclick=goback()><img src="../assets/back.png"></button>
-    <img id="img-producto" class="store-product-img" src="../${obj__.img[0]}">  
+    	onclick=goback()><img src="/assets/back.png"></button>
+    <img id="img-producto" class="store-product-img" src="${obj__.img[0]}">  
     <section id="specific-info" class="store-product-section">
         <h1 id="specific-name" class="store-product-name"> ${obj__.name}</h1>
         <h2 class="store-product-price">${obj__.price}</h2>
         <h3 class="store-product-category">${obj__.cat}</h3>
         <p class="store-product-description">${obj__.desc}</p>
 		<div id="color-options">
-		<h3>Select a color:<h3>
+		<h3>Select a color:</h3>
 		<div class="color-option" onclick="setColor('red')" style="background-color: red;"></div>
 		<div class="color-option" onclick="setColor('blue')" style="background-color: blue;"></div>
 		<div class="color-option" onclick="setColor('green')" style="background-color: green;"></div>
@@ -120,7 +120,7 @@ function updateItems() {
 
 			let img = document.createElement("img");
 			img.setAttribute("class","store-article-img");
-			img.setAttribute("src",`../${itemsFilter[j].img[0]}`);
+			img.setAttribute("src",`${itemsFilter[j].img[0]}`);
 
 			article.append(img);
 
@@ -152,7 +152,7 @@ function updateItems() {
 }
 
 // obtiene los productos desde un json y los guarda en items
-fetch("../productos.json")
+fetch("/productos.json")
 .then(response => {
 	return response.json();
 })
